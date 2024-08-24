@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayely VZ</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c07474;
+            font-family: Arial, sans-serif;
+        }
+        #container{
+            text-align: center;
+        }
+        h1{
+            font-size: 32px;
+            color: #333;
+        }
+        .buttons{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover{
+            background-color: #45a049;
+        }
+        .segunda{
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            background-color: #f44336;
+        }
+        .segunda:hover{
+            background-color: #d32f2f;
+        }
+        img{
+            margin-top: 30px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);          
+        }  
+    </style>
+</head>
+<body>
+    <div id="container">
+            <h1>¿Quieres disculparte por todo Fea? <br>Nayely Vasquez Zeballos ❤️</h1>
+    
+            <div class="buttons">
+                <button onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi">Si</button>
+                <div class="segunda"><botton>No</botton></div>
+            </div>
+        <img src="img/nayely.jpeg" alt="" width="200">
+    </div>
+
+    <script>
+        function accionParaCuandoEllaDigaQueSi(){
+            const respuesta = confirm("Estas segura amor? ");
+            if(respuesta){
+                // Redireccionar a la nueva pagina si responde "Si"
+                window.location.href ="opcionsi.html"
+            }else{
+                alert("Espero que puedas considerarlo 😉")
+            }           
+        }       
+        let boton_no = document.getElementsByClassName('segunda')[0];
+    
+        boton_no.onmouseover = () => {
+          boton_no.style.position = "absolute";
+          boton_no.style.left = Math.random()*300 + 'px';
+          boton_no.style.top = Math.random()*300 + 'px';
+    }
+    </script>
+</body>
+</html>
